@@ -1,4 +1,4 @@
-package reflectionPractice;
+package reflection;
 
 public class Car {
     private String make;
