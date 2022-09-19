@@ -1,4 +1,4 @@
-package annotation;
+package annotations;
 
 public class Person {
 
