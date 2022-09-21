@@ -25,5 +25,6 @@ public class Main {
             // System.out.println(method.getName());
         }
         System.out.println(c1.getMake());
+        System.out.println(c1.getClass().getModifiers());
     }
 }
