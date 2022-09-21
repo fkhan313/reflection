@@ -5,7 +5,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class Main {
-    public static void main(String[] args) throws IllegalAccessException, InvocationTargetException {
+    public static void main(String[] args) throws IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 
         Car c1= new Car("Toyota","Camry",2022);
         Field[] f1= c1.getClass().getDeclaredFields();
@@ -22,9 +22,19 @@ public class Main {
                 method.invoke(c1);
             }
             //get all methods
-            // System.out.println(method.getName());
+            System.out.println(method.getName());
         }
+        System.out.println("----------------------");
+
+
+        //using class literals
+        //Method m2 = Car.class.getMethod("start", Object.class);
+
+
+
+        System.out.println("----------------------");
         System.out.println(c1.getMake());
+        System.out.println("----------------------");
         System.out.println(c1.getClass().getModifiers());
     }
 }
