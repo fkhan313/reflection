@@ -1,5 +1,7 @@
 package reflection;
 
+import com.sun.source.tree.MethodInvocationTree;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -29,6 +31,15 @@ public class Main {
 
         //using class literals
         //Method m2 = Car.class.getMethod("start", Object.class);
+        Class<Car> testClass = Car.class;
+
+        System.out.println(testClass.getName());
+        System.out.println(testClass.getClassLoader());
+        System.out.println(testClass.getConstructors());
+        System.out.println(testClass.desiredAssertionStatus());
+        Method m2 = testClass.getMethod("start");
+
+
 
 
 
