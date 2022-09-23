@@ -37,7 +37,7 @@ public class Main {
         System.out.println(testClass.getClassLoader());
         System.out.println(testClass.getConstructors());
         System.out.println(testClass.desiredAssertionStatus());
-        Method m2 = testClass.getMethod("start");
+        Method m2 = testClass.getDeclaredMethod("start");
 
 
 
