@@ -26,26 +26,18 @@ public class Main {
             //get all methods
             System.out.println(method.getName());
         }
-        System.out.println("----------------------");
 
+        System.out.println(c1.getMake());
+        System.out.println(c1.getClass().getModifiers());
 
         //using class literals
-        //Method m2 = Car.class.getMethod("start", Object.class);
         Class<Car> testClass = Car.class;
-
         System.out.println(testClass.getName());
-        System.out.println(testClass.getClassLoader());
-        System.out.println(testClass.getConstructors());
-        System.out.println(testClass.desiredAssertionStatus());
         Method m2 = testClass.getDeclaredMethod("start");
+        System.out.println(testClass.getDeclaredMethod("start"));
+        System.out.println(m2);
+        System.out.println(m2.getReturnType());
 
 
-
-
-
-        System.out.println("----------------------");
-        System.out.println(c1.getMake());
-        System.out.println("----------------------");
-        System.out.println(c1.getClass().getModifiers());
     }
 }
